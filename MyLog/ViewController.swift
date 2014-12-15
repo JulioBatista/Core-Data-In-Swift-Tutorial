@@ -33,26 +33,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             LogItem.createInManagedObjectContext(moc,
                 title: "1st Item",
+                fullTitle: "My very first item",
                 text: "This is my first log item")
             
             LogItem.createInManagedObjectContext(moc,
                 title: "2nd Item",
+                fullTitle: "My second item",
                 text: "This is my second log item")
             
             LogItem.createInManagedObjectContext(moc,
                 title: "3rd Item",
+                fullTitle: "My third item",
                 text: "This is my third log item")
             
             LogItem.createInManagedObjectContext(moc,
                 title: "4th Item",
+                fullTitle: "My fourth item",
                 text: "This is my fourth log item")
             
             LogItem.createInManagedObjectContext(moc,
                 title: "5th Item",
+                fullTitle: "My fifth item",
                 text: "This is my fifth log item")
             
             LogItem.createInManagedObjectContext(moc,
                 title: "6th Item",
+                fullTitle: "My sixth item",
                 text: "This is my sixth log item")
             
         }
@@ -126,7 +132,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func saveNewItem(title : String) {
         // Create the new  log item
-        var newLogItem = LogItem.createInManagedObjectContext(self.managedObjectContext!, title: title, text: "")
+        var newLogItem = LogItem.createInManagedObjectContext(self.managedObjectContext!,
+            title: title,
+            fullTitle: "My Full Title",
+            text: "")
         
         // Update the array containing the table view row data
         self.fetchLog()

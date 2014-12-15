@@ -5,6 +5,6 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="LogItem" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="LogItem" positionX="-54" positionY="-9" width="128" height="73"/>
     </elements>
 </model>
